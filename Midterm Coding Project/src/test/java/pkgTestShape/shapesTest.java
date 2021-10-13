@@ -1,10 +1,14 @@
-package pkgShape;
+package pkgTestShape;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+//wasd
 import org.junit.jupiter.api.Test;
- 
-class shapeTest {
+
+import pkgShape.Circle;
+import pkgShape.Ellipse;
+import pkgShape.Ellipsoid;
+
+class shapesTest {
 
 	@Test
 	void CircleTest1() {
@@ -95,5 +99,12 @@ class shapeTest {
 		Ellipse e1 = new Ellipse(1,2);
 		assertEquals(e1.isCircle(),false);
 	}
+	
+	@Test
+	void isCircle2() {
+		Ellipse e1 = new Ellipse(1,1);
+		assertEquals(e1.isCircle(),true);
+	}
+
 
 }

@@ -25,9 +25,7 @@ public sealed class Ellipse extends Circle permits Ellipsoid{
 	}
 	
 	public boolean isCircle() {
-		if(minorRadius == getRadius())
-			return true;
-		return false;
+		return minorRadius == getRadius();
 	}
 	
 	

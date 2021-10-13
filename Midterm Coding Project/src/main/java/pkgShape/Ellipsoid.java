@@ -4,9 +4,11 @@ package pkgShape;
 public final class Ellipsoid extends Ellipse {
 	private double HeightRadius;
 	
-	public Ellipsoid(double R1, double R2,double R3) throws IllegalArgumentException {
+	public Ellipsoid(double R1, double R2,double R3)  {
 		super(R1, R2);
-		Math.sqrt(R3); //Checks if negative
+		if (R3 < 0 ) {
+			throw new IllegalArgumentException();
+		}
 		HeightRadius = R3;
 	}
 	

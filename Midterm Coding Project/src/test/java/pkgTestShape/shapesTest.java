@@ -9,7 +9,6 @@ import pkgShape.Ellipse;
 import pkgShape.Ellipsoid;
 
 class shapesTest {
-
 	@Test
 	void CircleTest1() {
 		Circle c = new Circle(10);

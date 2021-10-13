@@ -4,9 +4,11 @@ package pkgShape;
 public sealed class Ellipse extends Circle permits Ellipsoid{
 	private double MinorRadius;
 	
-	public Ellipse(double R1,double R2) throws IllegalArgumentException {
+	public Ellipse(double R1,double R2)  {
 		super(R1);
-		Math.sqrt(R2); //Checks if R2 is negative
+		if (R2 < 0 ) {
+			throw new IllegalArgumentException();
+		}
 		MinorRadius = R2;
 	}
 	

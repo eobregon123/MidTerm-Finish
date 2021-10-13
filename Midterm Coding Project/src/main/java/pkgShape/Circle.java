@@ -4,9 +4,11 @@ package pkgShape;
 public sealed class Circle extends Shape permits Ellipse{
 	private double Radius;
 	
-	public Circle(double R1) throws IllegalArgumentException {
+	public Circle(double R1)  {
 		
-			Math.sqrt(R1); //Checks if R1 is negative
+			if (R1 < 0 ) {
+				throw new IllegalArgumentException();
+			}
 			Radius = R1;
 	}
 	@Override

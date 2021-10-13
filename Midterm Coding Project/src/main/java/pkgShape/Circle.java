@@ -6,8 +6,8 @@ public sealed class Circle extends Shape permits Ellipse{
 	
 	public Circle(double R1) throws IllegalArgumentException {
 		
+			Math.sqrt(R1); //Checks if R1 is negative
 			Radius = R1;
-			Math.sqrt(Radius);
 	}
 	@Override
 	public double area() {

@@ -1,7 +1,7 @@
 package pkgTestShape;
 
 import static org.junit.jupiter.api.Assertions.*;
-//wasd
+
 import org.junit.jupiter.api.Test;
 
 import pkgShape.Circle;
@@ -30,6 +30,9 @@ class shapesTest {
 		double e2Area = el.volume();
 		assertEquals(20943.95,e2Area,0.02);
 	}
+	
+	/*All tests after this point are to check if 
+	compareTo and isCircle are implemented correctly*/
 	
 	@Test
 	void circleCompareToTest1() {

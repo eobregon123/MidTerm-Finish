@@ -2,30 +2,30 @@ package pkgShape;
 
 
 public sealed class Ellipse extends Circle permits Ellipsoid{
-	private double minorRadius;
+	private double MinorRadius;
 	
 	public Ellipse(double R1,double R2) throws IllegalArgumentException {
 		super(R1);
-		Math.sqrt(R2);
-		minorRadius = R2;
+		Math.sqrt(R2); //Checks if R2 is negative
+		MinorRadius = R2;
 	}
 	
 	@Override
 	public double area() {
-		return Math.PI*this.minorRadius*getRadius();
+		return Math.PI*this.MinorRadius*getRadius();
 	}
 	
 	
 	public double getMinorRadius() {
-		return minorRadius;
+		return MinorRadius;
 		}
 	
 	public void setMinorRadius(double minorR) {
-		minorRadius = minorR;
+		MinorRadius = minorR;
 	}
 	
 	public boolean isCircle() {
-		return minorRadius == getRadius();
+		return MinorRadius == getRadius();
 	}
 	
 	
